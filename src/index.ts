@@ -11,6 +11,7 @@ export function css(...args: (string | number | boolean | undefined | null | voi
         .filter(Boolean)
         .join(' ')
         .split(' ')
+        .filter(Boolean)
         .filter((item, pos, self) => self.indexOf(item) === pos)
         .join(' ')
 }

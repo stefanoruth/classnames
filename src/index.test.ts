@@ -16,4 +16,12 @@ describe('Generate classNames', () => {
     test('Removes dublicate classNames', () => {
         expect(css('a', 'a', 'b')).toBe('a b')
     })
+
+    test('Multiple classnames in same param', () => {
+        expect(css('a b', 'c')).toBe('a b c')
+    })
+
+    test('Multiple classnames in same param with trim', () => {
+        expect(css('a  b')).toBe('a b')
+    })
 })
