@@ -4,8 +4,8 @@ const { css } = require('../dist/index.cjs')
 const suite = new Benchmark.Suite()
 
 suite
-    .add('Generating classNames', function () {
-        css('a', 'b c', null, undefined, 'd', 1)
+    .add('strings', function () {
+        css('one', 'two', 'three')
     })
     .on('cycle', function (event) {
         console.log(String(event.target))
