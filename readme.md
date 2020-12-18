@@ -4,7 +4,7 @@ A simple classnames javascript utility function for combining conditional classn
 
 ![npm](https://img.shields.io/npm/v/@stefanoruth/classnames)
 ![npm](https://img.shields.io/npm/dt/@stefanoruth/classnames)
-![Build & Tests](https://github.com/@stefanoruth/classnames/workflows/Build%20&%20Tests/badge.svg?branch=master)
+![Build & Tests](https://github.com/stefanoruth/classnames/workflows/Build%20&%20Tests/badge.svg)
 
 ## Installation
 
