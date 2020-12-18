@@ -6,6 +6,7 @@
     "browser": "dist/index.umd.js",
     "types": "dist/index.d.ts",
     "author": "Stefano Ruth <stefano6262@gmail.com>",
+    "private": false,
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -16,7 +17,8 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "clean": "rm -rf dist/",
-        "build": "yarn clean && rollup -c rollup.config.ts"
+        "build": "rollup -c rollup.config.ts",
+        "prepare-release": "yarn clean && yarn build && yarn test --coverage"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^17.0.0",
