@@ -1,9 +1,29 @@
 export function css(...args: (string | number | boolean | undefined | null | void)[]) {
-    return args
-        .join(' ')
-        .split(' ')
-        .filter((item, pos, self) =>
-            item.length === 0 || ['1', '0', 'true'].includes(item) ? false : self.indexOf(item) === pos
-        )
-        .join(' ')
+    let value = ''
+
+    const addValue = (input: string) => {
+        input = input.trim()
+
+        if (value.indexOf(input) !== -1) {
+            return
+        }
+
+        if (input.length > 0) {
+            value += input + ' '
+        }
+    }
+
+    for (const arg of args) {
+        if (typeof arg === 'string') {
+            if (arg.indexOf(' ') > -1) {
+                for (const part of arg) {
+                    addValue(part)
+                }
+            } else {
+                addValue(arg)
+            }
+        }
+    }
+
+    return value.trimEnd()
 }
