@@ -1,17 +1,9 @@
 export function css(...args: (string | number | boolean | undefined | null | void)[]) {
     return args
-        .filter(value => {
-            if (typeof value === 'string') {
-                return true
-            }
-
-            return false
-        })
-        .map(i => (i as string).trim() || '')
-        .filter(Boolean)
         .join(' ')
         .split(' ')
-        .filter(Boolean)
-        .filter((item, pos, self) => self.indexOf(item) === pos)
+        .filter((item, pos, self) =>
+            item.length === 0 || ['1', '0', 'true'].includes(item) ? false : self.indexOf(item) === pos
+        )
         .join(' ')
 }
