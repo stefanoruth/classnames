@@ -31,4 +31,4 @@ jobs:
               run: yarn test -ci --coverage
 
             - name: Benchmarks
-              run: yarn benchmarks
+              run: node ./benchmarks/run.js
