@@ -7,6 +7,10 @@
     "types": "dist/index.d.ts",
     "author": "Stefano Ruth <stefano6262@gmail.com>",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stefanoruth/classnames.git"
+    },
     "scripts": {
         "benchmarks": "node ./benchmarks/run.js",
         "test": "jest",
