@@ -22,9 +22,7 @@ yarn add @stefanoruth/classnames
 import React from 'react
 import { css } from '@stefanoruth/classnames'
 
-
 export const Card = props => {
-
     return <div className={css('bg-white w-full shadow rounded', props.spacing && 'px-4 py-6' props.className)}>{props.children}</div>
 }
 ```
