@@ -1,15 +1,14 @@
 export function css(...args: (string | number | boolean | undefined | null | void)[]) {
-    const classes: string[] = []
+    let classes = ''
 
-    const addValue = (input: string) => {
+    function addValue(input: string) {
         input = input.trim()
 
-        if (classes.indexOf(input) !== -1) {
-            return
-        }
-
         if (input.length > 0) {
-            classes.push(input)
+            if (classes) {
+                classes += ' '
+            }
+            classes += input
         }
     }
 
@@ -25,5 +24,5 @@ export function css(...args: (string | number | boolean | undefined | null | voi
         }
     }
 
-    return classes.join(' ')
+    return classes
 }
