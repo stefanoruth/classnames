@@ -31,3 +31,7 @@ test('Multiple classnames in same param with trim', () => {
     expect(css('a   b')).toBe('a b')
     expect(css('a    b')).toBe('a b')
 })
+
+test('Dont destroy classnames with dashes', () => {
+    expect(css('h-6 w-6', 'block')).toBe('h-6 w-6 block')
+})

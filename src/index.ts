@@ -15,7 +15,8 @@ export function css(...args: (string | number | boolean | undefined | null | voi
     for (const arg of args) {
         if (typeof arg === 'string') {
             if (arg.indexOf(' ') > -1) {
-                for (const part of arg) {
+                const parts = arg.split(' ')
+                for (const part of parts) {
                     addValue(part)
                 }
             } else {
