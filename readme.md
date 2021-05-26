@@ -19,7 +19,7 @@ yarn add @stefanoruth/classnames
 ## Example
 
 ```tsx
-import React from 'react
+import React from 'react'
 import { css } from '@stefanoruth/classnames'
 
 export const Card = props => {
